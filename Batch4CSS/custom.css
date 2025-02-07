@@ -1,9 +1,11 @@
 /* universal selector */
-/* *{
-    color: aquamarine;
+*{
+    text-align: center;
+    color: red;
     font: 10px;
+    margin: 0px;
 }
-tag element selector */
+/* tag element selector */ 
  /* h1{ */
     /* color: green; */
 /* } */
@@ -30,7 +32,7 @@ tag element selector */
 /* child select */
 .child > a{
     color :green;
-    text-decoration: none;
+   
 
 }
 /* pseudo Selector */
@@ -56,5 +58,140 @@ a:visited{
     border: 2px solid black;
     font-style: italic;
  }
+ .Borderone{
+    border: 12px dashed yellow ;
+ }
+ .BorderTwo
+ {
+    border-left: 15px double darkblue;
+ }
+ .Bordersizeone{
+    border-style: solid;
+    border-width: 10px 34px;
+    /* T R L B */
+ }
+ .Borderstyle{
+    border-style: solid dashed double;
+    border-color: red yellow blue;
+ }
+ .margin{
+    border: 10px solid black;
+    margin: 200px;
+ }
+ .padding{
+    border: 19px solid red;
+    padding: 100px 12px 58px 28px;
+ }
+.inline{
+    border: 20px;
+    width: 300px;
+    display: inline-block;
+}
+.block{
+    border: 30px;
+    width: 200px;
+    display: inline-block;
+}
+/* float */
+.float_left img{
+    width: 40%;
+    float: left;
+}
+.clear{
+    clear: both;
+}
 
 
+.float_right img{
+    width: 40%;
+    float: right;
+}
+
+
+/* grid */
+.gridone div,.gridtwo div,.gridthree div,.gridfour div,.gridfive div,.gridsix div{
+    padding: 28px;
+    color: white;
+    text-align: center;
+}
+
+
+.gridone, .gridtwo,.gridthree,.gridfour,.gridfive,.gridsix{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+
+.gridtwo{
+    grid-column-gap: auto auto auto ;
+}
+
+
+.gridthree{
+    grid-row-gap: 30px;
+}
+
+
+.gridfour{
+    grid-gap: 50px;
+}
+
+
+.columadd{
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+}
+
+.rowadd{
+    grid-column-start: 2;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+.relative_parent{
+    border: 2px solid red;
+    width: 1000px;
+    height: 500px;
+}
+.relative{
+    border: 2px solid green;
+    width: 500px;
+    height: 200px;
+    position: relative;
+    top: 100px;
+    left: 150px;
+}
+.absoulte_parent{
+    border: 2px solid yellow;
+    width: 1000px;
+    height: 500px;
+    position: relative;
+}
+.absoult{
+    border: 2px solid blue;
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    top: 1000px;
+    right: 30px;
+}
+.fixed{
+    position: fixed;
+    top: 100px;
+    right: 100px;
+}
+
+.onlinefont{
+    font-family: "Dancing Script", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+}
+
+@font-face{
+    src:url("image/font/static/NotoSerifHentaigana-Black.ttf");
+    font-family: "shadow";
+  }
+  .offline{
+    font-family: "shadow";
+  }
