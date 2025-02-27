@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+   
+   for(let h = 4; h >= 0; h--){
+        for(let j = 0; j <= h; j++){
+            document.write("*");
+
+        }
+        document.write("<br>");
+       
+       }
+        let num = parseInt(prompt("Enter a number:"));
+        let i = 1;
+
+        document.write(`<h2>Multiplication Table for ${num}</h2>`);
+        
+        while (i <= 12) {
+            document.write(`${num} x ${i} = ${num * i} <br>`);
+            i++;
+        }
+        let screctNumber=7;
+        let guesNumber=Number(prompt('Enter a number between 1 to 20'));
+        let count=0;
+        while(screctNumber != guesNumber)
+        {
+            if(guesNumber<screctNumber){
+                alert('Your number is lower. Try again');
+
+            }
+            else{
+                alert('Your number is higher, Try again');
+
+            }
+            guesNumber=Number(prompt('Enter a number between'));
+            count+=1;
+        }
+        document.write('Your number is Correct <br>');
+        document.write("Your are correct at "+count+"times");
+
+    </script>
+    </body>
+</html>
