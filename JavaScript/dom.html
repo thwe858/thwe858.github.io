@@ -7,6 +7,11 @@
 </head>
 <body>
     <h1 id="myId">Dam <i> Select </i></h1>
+    <p class="myClass">Class Selector1</p>
+    <p class="myClass">Class Selector1</p>
+    <p class="myClass">Class Selector1</p>
+    <p class="myClass">Class Selector1</p>
+    <p class="myClass">Class Selector1</p>
     <button onclick="showData()">Click Me</button>
         <script>
             function showData()
@@ -14,7 +19,26 @@
                 let myId=document.getElementById('myId');
                 console.log(myId);
                  console.log(myId.innerText);
-                 console.log(myId.innerHTML)
+                 console.log(myId.innerHTML);
+                 myId.innerText='Javascript is<i> So Funny!</i>';
+                 //class Selctor
+                 let myClass=document.getElementsByClassName('myClass')
+                 console.log(myClass);
+                 console.log(myClass[1]);
+                 console.log(myClass[1].innerText);
+
+                 let tagName=document.getElementsByTagName('p')
+                 console.log(tagName);
+                 console.log(tagName[1]);
+                 console.log(tagName[1].innerText);
+
+                 let querySelector=document.querySelector('.myClass');
+                 console.log(querySelector);
+
+                 let querySelectorAll=document.querySelectorAll('myquerySelectorAll');
+                 console.log(querySelectorAll);
+
+
             }
         </script>
     
