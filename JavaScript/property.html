@@ -8,7 +8,19 @@
 <body>
     <h1>Property And Method</h1>
     <h2 id="createTextNodeId"></h2>
+    <p id="setAtt">this is set Attribute</p>
+    <p id="getAtt" style="color: green; font-style: italic;" class="getAttribute">This is Get Arribute</p>
+    <p id="removeAtt" style="color:red;">This is Reomve Att</p>
+
+
     <button onclick="createText()">createTextNode</button>
+    <button onclick="createElementLesson()">CreateElementNOde</button>
+    <button onclick="createSetAtt()">CreateSetAttribuate</button>
+    <button onclick="createGetAtt()">CreateGetAtt</button>
+    <button onclick="changecolor()">changecolor</button>
+    
+    
+    
     <script>
         function createText(){
             // alert('Hello')
@@ -17,6 +29,44 @@
             let createText=document.createTextNode('create Text Node');
             createTextNodeId.appendChild(createText);
         }
+        function createElementLesson()
+        {
+            let h3=document.createElement('h3');
+            h3.innerText="This is create Element";
+            document.body.appendChild(h3);
+
+        }
+        function createSetAtt()
+        {
+            let setAttElement=document.getElementById('setAtt');
+            setAttElement.setAttribute('style','color:red')
+        }
+
+        function createGetAtt()
+        {
+            let getAttElement=document.getElementById('getAtt');
+            console.log(getAttElement.getAttribute('style'));
+        }
+
+        function changecolor()
+        {
+            let reamoveTag=document.getElementById('removeAtt');
+            let colorName=reamoveTag.getAttribute('style');
+            console.log(colorName);
+            if(colorName=='color:red;'){
+                reamoveTag.removeAttribute('style');
+                reamoveTag.setAttribute('style','color:green');
+
+            }
+            else{
+                reamoveTag.removeAttribute('style');
+                reamoveTag.setAttribute('style','color:red');
+
+            }
+           
+        }
+
+        
     </script>
 </body>
 </html>
