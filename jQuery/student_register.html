@@ -82,7 +82,7 @@
                         <td>${year}</td>
                         <td>
                             <button class="edit" data-key="${i}"data-name="${name}"data-email="${email}"data-phone="${phone}" data-year="${year}"> Edit </button>
-                            <button> Delete </button>
+                            <button class="delete" data-key="${i}"> Delete </button>
                             </td>
                         </tr>`
                 })
@@ -166,6 +166,22 @@
                 }
             })
 
+            $('tbody').on('click','.delete',function(){
+                let key=$(this).data('key');
+                console.log(key);
+                let ans=confirm("Are you sure delete?");
+                console.log(ans);
+                if(ans){
+                    let studentString=localStorage.getItem("student");
+                    if(studentString){
+                        let studentArray=JSON.parse(studentString);
+                        studentArray.splice(key,1);
+                        let studentData=JSON.stringify(studentArray);
+                        localStorage.setItem('student',studentData);
+                        getData();
+                    }
+                }
+            })
         })
     </script>
 </body>
