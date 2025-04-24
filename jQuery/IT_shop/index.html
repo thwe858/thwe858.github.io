@@ -11,9 +11,9 @@
     <nav class="navbar">
         <div class="logo">IT Shop</div>
         <div class="nav-links">
-            <a href="#" class="cart">Home
+            <a href="checkout.html" class="cart">Home
                 <i class="fas fa-shopping-cart cart-icon"></i>
-                <span class="cart-badge">0</span>
+                <span class="cart-badge" id='item-count'>0</span>
             </a>
         </div>  
     </nav>
@@ -24,8 +24,8 @@
             <img src="images/laptop2.jpg" alt="Laptop 1" width="500px" height="150px">
             <div class="card-content">
                 <h3>Laptop 1</h3>
-                <p>Price: 2,300,000 MMK</p>
-                <a href="#" class="btn">Add to Cart</a>
+                <p>Price: 230000 MMK</p>
+                <a  class="btn addToCart" data-id="1" data-name="Laptop 1" data-price="230000">Add to Cart</a>
             </div>
         </div>
         
@@ -33,16 +33,16 @@
             <img src="images/laptop2.jpg" alt="Laptop 2">
             <div class="card-content">
                 <h3>Laptop 2</h3>
-                <p>Price: 2,000,000 MMK</p>
-                <a href="#" class="btn">Add to Cart</a>
+                <p>Price: 200000 MMK</p>
+                <a  class="btn addToCart" data-id="2" data-name="Laptop 2" data-price="200000">Add to Cart</a>
             </div>
         </div>
         <div class="card">
             <img src="images/laptop2.jpg" alt="Laptop 3" width="400px" height="200px">
             <div class="card-content">
                 <h3>Laptop 3</h3>
-                <p>Price: 1,900,000 MMK</p>
-                <a href="#" class="btn">Add to Cart</a>
+                <p>Price: 190000 MMK</p>
+                <a  class="btn addToCart" data-id="3" data-name="Laptop 3" data-price="190000">Add to Cart</a>
             </div>
         </div>
         <div class="card">
@@ -50,7 +50,7 @@
             <div class="card-content">
                 <h3>Laptop 4</h3>
                 <p>Price: 1,800,000 MMK</p>
-                <a href="#" class="btn">Add to Cart</a>
+                <a  class="btn">Add to Cart</a>
             </div>
         </div>
         
@@ -61,7 +61,7 @@
             <div class="card-content">
                 <h3>Iphone 1</h3>
                 <p>Price: 3,200,000 MMK</p>
-                <a href="#" class="btn">Add to Cart</a>
+                <a  class="btn">Add to Cart</a>
             </div>
         </div>
         
@@ -70,7 +70,7 @@
             <div class="card-content">
                 <h3>Iphone 2</h3>
                 <p>Price: 3,400,000 MMK</p>
-                <a href="#" class="btn">Add to Cart</a>
+                <a  class="btn">Add to Cart</a>
             </div>
         </div>
         <div class="card">
@@ -78,7 +78,7 @@
             <div class="card-content">
                 <h3>Iphone 3</h3>
                 <p>Price: 2,300,000 MMK</p>
-                <a href="#" class="btn">Add to Cart</a>
+                <a  class="btn addToCart">Add to Cart</a>
             </div>
         </div>
         <div class="card">
@@ -86,10 +86,12 @@
             <div class="card-content">
                 <h3>Iphone 4</h3>
                 <p>Price: 2,800,000 MMK</p>
-                <a href="#" class="btn">Add to Cart</a>
+                <a  class="btn">Add to Cart</a>
             </div>
         </div>
     </div>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="script.js"></script>
 
 </body>
 </html>
