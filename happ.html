@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday Amelie</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #d1c4e9, #e1bee7);
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      overflow: hidden;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .slideshow {
+      background-color: #7e57c2;
+      color: white;
+      border-radius: 30px;
+      padding: 40px;
+      width: 80%;
+      max-width: 700px;
+      text-align: center;
+      box-shadow: 0 0 30px rgba(126, 87, 194, 0.7);
+      animation: glow 2s infinite alternate;
+      position: relative;
+    }
+
+    @keyframes glow {
+      0% { box-shadow: 0 0 20px rgba(126, 87, 194, 0.4); }
+      100% { box-shadow: 0 0 40px rgba(126, 87, 194, 1); }
+    }
+
+    .slide {
+      display: none;
+      font-size: 28px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .slide.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .emoji {
+      font-size: 30px;
+      margin: 10px;
+    }
+
+    /* Animated Toy */
+    .toy {
+      position: absolute;
+      bottom: -20px;
+      right: 30px;
+      font-size: 50px;
+      animation: bounceToy 2s infinite ease-in-out;
+    }
+
+    @keyframes bounceToy {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-30px); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="slideshow">
+    <!-- Slideshow Slides -->
+    <div class="slide active">🎉 Happy Birthday, Amelie! 🎉</div>
+    <div class="slide">Wishing you your dream <span class="emoji">🚗</span> car</div>
+    <div class="slide">A beautiful and cozy <span class="emoji">🏡</span> home</div>
+    <div class="slide">A happy, loving <span class="emoji">👨‍👩‍👧‍👦</span> family</div>
+    <div class="slide">May you keep traveling the world <span class="emoji">✈️🌍</span> and inspiring us all</div>
+    <div class="slide">💜 With love and respect from your student, Selena 💜</div>
+
+    <!-- Animated Toy -->
+    <div class="toy">🧸</div>
+  </div>
+
+  <script>
+    let slides = document.querySelectorAll(".slide");
+    let index = 0;
+
+    setInterval(() => {
+      slides[index].classList.remove("active");
+      index = (index + 1) % slides.length;
+      slides[index].classList.add("active");
+    }, 3000); // Change slide every 3 seconds
+  </script>
+
+</body>
+</html>
