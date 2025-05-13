@@ -1,0 +1,44 @@
+<html>
+<style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 2000px; /* Make the page long enough to scroll */
+      background-color: #f0f0f0;
+    }
+
+    .container {
+      width: 100%;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+    }
+
+    img {
+      transition: width 0.2s ease; /* Smooth transition for resizing */
+      width: 80%; /* Initial width */
+    }
+  </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores similique inventore blanditiis nostrum nemo cumque hic illum quidem harum aliquid. Mollitia deserunt suscipit dolor? Voluptas doloribus illum possimus iure sint. Alias autem distinctio suscipit, eveniet eum debitis odit! Ut, ab? Numquam tempore fuga officiis aspernatur magni eveniet! Doloremque dolorem omnis quas reprehenderit, dignissimos, numquam ducimus voluptates earum harum, molestias nesciunt pariatur molestiae animi. Sint debitis harum aperiam tempora, quam ab dolore quis libero maxime dicta. Officiis debitis, praesentium nobis ipsum porro modi quidem suscipit tempora temporibus omnis! Distinctio iure laborum sunt laboriosam cum voluptate totam officia ipsum necessitatibus et dolores facere nam perspiciatis rem pariatur vero blanditiis itaque optio quia a, dolor repudiandae suscipit! Nobis iure dolor aut, sint corporis, tenetur quis ipsum illo dicta cupiditate magni sunt itaque voluptatum eos voluptas dolorum officiis corrupti rerum ducimus aliquid consequatur quo suscipit. Porro velit, sapiente consectetur asperiores culpa natus nihil cum accusantium tempora facere distinctio! Magni eaque necessitatibus doloribus, ab illum nesciunt quae dolor quis aperiam magnam. Magni corrupti non, nulla perspiciatis hic cupiditate nesciunt quis ducimus veritatis culpa velit aspernatur, recusandae iste. Ullam sed a facilis excepturi minima, quae vero ipsam voluptatum illum cumque nihil laboriosam provident, fuga aliquam neque molestiae natus eos qui labore nam adipisci rerum quasi aliquid. Culpa vitae fugit quasi dolore, quaerat sunt nam delectus ut. Dolores tenetur laboriosam enim laudantium nam quos aperiam quae earum nulla modi nemo optio tempora assumenda, quidem quis, veniam hic? Dolores quos voluptate fugiat repudiandae iusto quis necessitatibus laudantium similique dolore ad labore ab velit id at quia excepturi, corrupti itaque quasi quae. Ut, ducimus. Facilis, quam officia necessitatibus sunt id praesentium, aperiam deserunt soluta dicta molestiae accusantium quae maiores commodi doloribus animi quasi autem eaque repellat. Saepe quis illo, molestias dolore error dolorem at quam consectetur veniam reiciendis cupiditate.</p>
+
+  <div class="container">
+    
+    <img src="images/Bg-1.jpg" id="resizableImage"  alt="">
+  </div>
+
+  <script>
+    window.onscroll = function() {
+      let scrollPosition = window.scrollY; // Get the scroll position
+      let image = document.getElementById('resizableImage');
+
+      // Calculate new width based on scroll position
+      let newWidth = 80 + scrollPosition / 10; // Adjust this value to change the speed of resizing
+
+      // Set the new width of the image
+      image.style.width = newWidth + '%'; 
+    };
+  </script>
+</body>
+</html>
